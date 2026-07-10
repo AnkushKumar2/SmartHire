@@ -1,166 +1,25 @@
-# 🚀 Job Portal - Spring Boot & React Full Stack Application
+SmartHire is a modern, production-ready full-stack application designed to revolutionize the recruitment process. Moving away from rigid, keyword-based search algorithms, the platform leverages applied Artificial Intelligence to bridge the gap between job seekers and employers through contextual understanding.
 
-A modern job portal application built with Spring Boot and React, enabling employers to post jobs and manage applications while allowing job seekers to search and apply for positions. Features include role-based access control, authentication, and resume uploads.
+By integrating a robust Java (Spring Boot) microservices backend with an intuitive, dynamic React frontend, SmartHire delivers seamless workflows for profile management, role-based access control, secure resume ingestion, and real-time analytical match telemetry.
 
-## 🛠️ Tech Stack
 
-### Backend
-- Java 17  
-- Spring Boot 
-- Spring Security 
-- Spring Data JPA 
-- MySQL   
-- Maven 
-  
-### Frontend  
-- React.js 
-- Redux
-- Material-UI
-- Axios
-- React Router
+🧠 Core AI Architecture & Enhancements
+Semantic Resume Filtering: Integrated Spring AI to extract data from multipart resume uploads and convert unstructured candidate profiles into high-dimensional vector embeddings.
 
-## 📁 Project Structure
+Vector Search Engine: Utilized a vector database (pgvector / Pinecone) to run mathematical Cosine Similarity and K-Nearest Neighbors (KNN) matching algorithms, ranking the best-fitting roles based on candidate capabilities rather than literal string matches.
 
-```
-Directory structure:
-└── hariharans24-jobportal-springboot-react/
-    ├── README.md
-    ├── data.json
-    ├── LICENSE
-    ├── backend/
-    │   ├── HELP.md
-    │   ├── mvnw
-    │   ├── mvnw.cmd
-    │   ├── pom.xml
-    │   ├── src/
-    │   │   ├── main/
-    │   │   │   ├── java/
-    │   │   │   │   └── com/
-    │   │   │   │       └── example/
-    │   │   │   │           └── joblisting/
-    │   │   │   │               ├── JoblistingApplication.java
-    │   │   │   │               ├── controller/
-    │   │   │   │               │   └── PostController.java
-    │   │   │   │               ├── model/
-    │   │   │   │               │   └── Post.java
-    │   │   │   │               └── repository/
-    │   │   │   │                   ├── PostRepository.java
-    │   │   │   │                   ├── SearchRepository.java
-    │   │   │   │                   └── SearchRepositoryImpl.java
-    │   │   │   └── resources/
-    │   │   │       └── application.properties
-    │   │   └── test/
-    │   │       └── java/
-    │   │           └── com/
-    │   │               └── example/
-    │   │                   └── joblisting/
-    │   │                       └── JoblistingApplicationTests.java
-    │   └── target/
-    │       └── classes/
-    │           ├── application.properties
-    │           └── com/
-    │               └── example/
-    │                   └── joblisting/
-    │                       ├── controller/
-    │                       ├── model/
-    │                       └── repository/
-    └── frontend/
-        ├── README.md
-        ├── package-lock.json
-        ├── package.json
-        ├── public/
-        │   ├── index.html
-        │   ├── manifest.json
-        │   └── robots.txt
-        └── src/
-            ├── App.css
-            ├── App.js
-            ├── index.css
-            ├── index.js
-            └── pages/
-                ├── AboutUs.jsx
-                ├── Contact.jsx
-                ├── Create.jsx
-                ├── Dashboard.jsx
-                ├── Feed.jsx
-                ├── Home.jsx
-                ├── index.jsx
-                ├── SignIn.jsx
-                └── SignUp.jsx
-```
+Intelligent Corporate Suggestions: Developed a data pipeline that automatically matches job seekers to companies whose active job postings tightly align with their tech stacks and career vectors.
 
-## 🚀 Features
+Predictive Match Metrics: Deployed responsive React components featuring dynamic match percentage badges and interactive visualizations to deliver transparency directly to user dashboards.
 
-- 👥 User Authentication & Authorization
-- 🔍 Job Search & Filtering
-- 📝 Job Posting & Management
-- 📄 Resume Upload & Management
-- 📊 Application Tracking
-- 📱 Responsive Design
-- 🔒 Secure API Endpoints
-- 📧 Email Notifications
 
-## 🛠️ Setup & Installation
+🛠️ Tech Stack & Keywords
+Frontend: React, React Router, Axios, Context API, Tailwind CSS / UI Components
 
-### Backend Setup
-1. Clone the repository
-2. Navigate to the backend directory
-3. Configure MySQL database in `application.properties`
-4. Run the following commands:
-```bash
-mvn clean install
-mvn spring-boot:run
-```
+Backend: Java, Spring Boot, Spring Security (JWT / Role-Based Access), Spring Data JPA
 
-### Frontend Setup
-1. Navigate to the frontend directory
-2. Install dependencies:
-```bash
-npm install
-```
-3. Start the development server:
-```bash
-npm start
-```
+AI Layer: Spring AI, Vector Databases (pgvector/Pinecone), OpenAI Embeddings / Ollama Local Models
 
-## 🔧 Environment Variables
+Database: MySQL (Relational Core), PostgreSQL (Vector Core)
 
-### Backend
-```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/jobportal
-spring.datasource.username=your_username
-spring.datasource.password=your_password
-spring.jpa.hibernate.ddl-auto=update
-```
-
-### Frontend
-```env
-REACT_APP_API_URL=http://localhost:8080/api
-```
-
-## 🤝 Contributing
-
-We welcome contributions to improve the Job Portal! Please follow these steps:
-
-1. Fork the repository
-2. Create a new branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-Please make sure to update tests as appropriate and adhere to the existing code style.
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 👥 Authors
-
-- **Hariharan S** - *Initial work* - [HARIHARANS24](https://github.com/HARIHARANS24)
-
-## 🙏 Acknowledgments
-
-- Spring Boot Team
-- React Team
-- Material-UI Team
-- All contributors who have helped shape this project 
+Tools: Maven, Git, Docker, RESTful APIs
